@@ -1,0 +1,39 @@
+.profile-card {
+  @include flex(center, flex-start);
+  padding: 20px;
+  padding-left: 0;
+  border: 2px solid $main-color;
+  border-radius: 25px;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: translateY(-1.5rem);
+    color: $main-color;
+  }
+  &__icon {
+    @include flex(center, center);
+    width: 40%;
+    color: $main-color;
+
+    i {
+      background-color: $main-color;
+      color: $txt-white;
+      padding: 1rem;
+      font-size: 3rem;
+      border: 1px solid $main-color;
+      border-radius: 50px;
+    }
+  }
+  &__info {
+    &__name {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      font-size: 1rem;
+      color: $txt-second-color;
+    }
+  }
+}

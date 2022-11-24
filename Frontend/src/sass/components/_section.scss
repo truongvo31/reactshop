@@ -1,0 +1,27 @@
+.section {
+  margin-bottom: 80px;
+
+  & > * ~ * {
+    margin-top: 70px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+    line-height: 60px;
+  }
+
+  &__title::after {
+    content: "";
+    background: $main-color;
+    width: 10rem;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

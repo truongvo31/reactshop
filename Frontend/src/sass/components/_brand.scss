@@ -1,0 +1,17 @@
+.brand__img {
+  @include flex(center, center);
+  padding: 2rem;
+
+  img {
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0%);
+      transition: filter 0.3s ease;
+    }
+
+    @include mobile {
+      filter: grayscale(0%);
+    }
+  }
+}
